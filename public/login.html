@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf - Log in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="auth-wrap">
+    <h1 class="brand brand-large">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="4.2" height="16" rx="1.2"></rect>
+        <rect x="9" y="4" width="4.2" height="16" rx="1.2"></rect>
+        <rect x="15.3" y="5" width="4.2" height="15" rx="1.2" transform="rotate(-12 17.4 12.5)"></rect>
+      </svg>
+      <span>Bookshelf</span>
+    </h1>
+    <p class="auth-sub">Keep track of everything you read.</p>
+
+    <section class="panel auth-card">
+      <div class="segmented" role="group" aria-label="Choose login or register">
+        <button type="button" id="login-tab" class="seg active" aria-pressed="true">Log in</button>
+        <button type="button" id="register-tab" class="seg" aria-pressed="false">Create account</button>
+      </div>
+
+      <form id="auth-form" class="stack">
+        <div class="field hidden" id="name-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" required autocomplete="email">
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" required minlength="6" autocomplete="current-password">
+        </div>
+
+        <p id="password-hint" class="hint hidden">Use at least 6 characters.</p>
+        <p id="message" class="form-error" role="alert"></p>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary">Log in</button>
+      </form>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
